@@ -22,7 +22,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>SpringMVC User Manager System - N</h1>
+    <h1><a href="/" title="home">User Manager System</a></h1>
     <hr/>
 
     <h3>所有用户 <a href="/user/add" type="button" class="btn btn-primary btn-sm">添加</a></h3>

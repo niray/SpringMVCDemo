@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Created by Mac on 16/10/9.
  */
-
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Integer> {
 

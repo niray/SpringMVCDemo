@@ -17,15 +17,33 @@
     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+        #logindev {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background-color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-<h1>这里是SpringMVC Demo首页</h1>
-
-<h3>出现此页面，说明配置成功。</h3>
+<div class="container">
+    <div class="col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2" id="logindev">
+        <form class="form">
+            <h2>Spring MVC</h2>
+            <a href="/user" type="button" class="btn btn-primary btn-sm">用户管理</a>
+            <a href="/blog" type="button" class="btn btn-primary btn-sm">博客管理</a>
+        </form>
+    </div>
+</div> <!-- /container -->
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>

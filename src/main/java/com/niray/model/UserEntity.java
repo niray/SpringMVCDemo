@@ -2,9 +2,10 @@ package com.niray.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 
 /**
- * Created by Mac on 16/10/9.
+ * Created by Mac on 16/10/10.
  */
 @Entity
 @Table(name = "user", schema = "qq", catalog = "")
@@ -12,6 +13,7 @@ public class UserEntity implements Serializable {
     private int id;
     private String nickname;
     private String password;
+    private Collection<BlogEntity> blogById;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -63,5 +65,14 @@ public class UserEntity implements Serializable {
         result = 31 * result + (nickname != null ? nickname.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
+    }
+
+    @OneToMany(mappedBy = "userById")
+    public Collection<BlogEntity> getBlogById() {
+        return blogById;
+    }
+
+    public void setBlogById(Collection<BlogEntity> blogById) {
+        this.blogById = blogById;
     }
 }

@@ -22,7 +22,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>SpringMVC User Manager System - N</h1>
+    <h1><a href="/" title="home">User Manager System</a></h1>
     <hr/>
 
     <h3>所有用户 <a href="/user/add" type="button" class="btn btn-primary btn-sm">添加</a></h3>
@@ -51,11 +51,11 @@
                 <td>${user.nickname}</td>
                     <%--<td>${user.firstName} ${user.lastName}</td>--%>
                 <td>${user.password}</td>
-                    <td>
+                <td>
                     <a href="/user/detail/${user.id}" type="button" class="btn btn-sm btn-success">详情</a>
                     <a href="/user/update/${user.id}" type="button" class="btn btn-sm btn-warning">修改</a>
                     <a href="/user/delete/${user.id}" type="button" class="btn btn-sm btn-danger">删除</a>
-                    </td>
+                </td>
             </tr>
         </c:forEach>
     </table>

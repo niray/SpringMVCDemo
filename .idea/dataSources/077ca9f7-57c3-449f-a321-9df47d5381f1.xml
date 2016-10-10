@@ -9,32 +9,62 @@
     <schema id="4" name="performance_schema"/>
     <schema id="5" name="sys"/>
     <table id="6" parent="1" name="user"/>
-    <column id="7" parent="6" name="id">
+    <table id="7" parent="1" name="blog"/>
+    <column id="8" parent="6" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="8" parent="6" name="nickname">
+    <column id="9" parent="6" name="nickname">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="9" parent="6" name="password">
+    <column id="10" parent="6" name="password">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="10" parent="6" name="date">
+    <column id="11" parent="6" name="date">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <index id="11" parent="6" name="id_UNIQUE">
+    <index id="12" parent="6" name="id_UNIQUE">
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
-    <key id="12" parent="6" name="PRIMARY">
+    <key id="13" parent="6" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <key id="13" parent="6" name="id_UNIQUE">
+    <key id="14" parent="6" name="id_UNIQUE">
       <columns>id</columns>
       <underlying-index>id_UNIQUE</underlying-index>
     </key>
+    <column id="15" parent="7" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="16" parent="7" name="title">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="17" parent="7" name="content">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="18" parent="7" name="pub_date">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="19" parent="7" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="20" parent="7" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="21" parent="7" name="user_id">
+      <columns>id</columns>
+      <ref-key>~.user.PRIMARY</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
   </database-model>
 </dataSource>

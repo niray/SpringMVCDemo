@@ -25,12 +25,12 @@
     <hr/>
 
     <form:form action="/user/updateP" method="post" commandName="userP" role="form">
-      <div class="form-group">
-          <label for="id">Id:</label>
-          <!-- 把 id 一并写入 userP 中 -->
-          <input type="text" class="form-control" id="id" name="id" value="${user.id}" placeholder="Enter userId"
-                value = "${user.id}"/>
-      </div>
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <!-- 把 id 一并写入 userP 中 -->
+            <input type="text" class="form-control" id="id" name="id" value="${user.id}" placeholder="Enter userId"
+                   value="${user.id}"/>
+        </div>
 
         <div class="form-group">
             <label for="nickname">Nickname:</label>

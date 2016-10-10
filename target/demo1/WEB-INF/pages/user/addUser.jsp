@@ -18,19 +18,19 @@
     <hr/>
     <form:form action="/user/addP" method="post" commandName="user" role="form">
 
-    <div class="form-group">
-        <label for="nickname">Nickname:</label>
-        <input type="text" class="form-control" id="nickname" name="nickname" placeholder="Enter Nickname:"/>
-    </div>
+        <div class="form-group">
+            <label for="nickname">Nickname:</label>
+            <input type="text" class="form-control" id="nickname" name="nickname" placeholder="Enter Nickname:"/>
+        </div>
 
-    <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="text" class="form-control" id="password" name="password" placeholder="Enter Password:"/>
-    </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" class="form-control" id="password" name="password" placeholder="Enter Password:"/>
+        </div>
 
-    <div class="form-group">
-        <button type="submit" class="btn btn-sm btn-success">提交</button>
-    </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-sm btn-success">提交</button>
+        </div>
     </form:form>
 </div>
 

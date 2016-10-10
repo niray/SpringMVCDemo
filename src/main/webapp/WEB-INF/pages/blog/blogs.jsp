@@ -9,10 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>SpringMVC 博客管理</title>
-
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -22,22 +20,19 @@
 </head>
 <body>
 <div class="container">
-    <h1>SpringMVC 博客系统-博客管理</h1>
+    <h1><a href="/" title="home">博客管理</a></h1>
     <hr/>
-
-    <h3>所有博客 <a href="/admin/blogs/add" type="button" class="btn btn-primary btn-sm">添加</a></h3>
-
+    <h3>所有博客 <a href="/blog/add" type="button" class="btn btn-primary btn-sm">添加</a></h3>
     <!-- 如果用户列表为空 -->
-    <c:if test="${empty blogList}">
+    <c:if test="${empty blogs}">
         <div class="alert alert-warning" role="alert">
-            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Blog表为空，请<a href="/admin/blogs/add"
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Blog表为空，请<a href="/blog/add"
                                                                                               type="button"
                                                                                               class="btn btn-primary btn-sm">添加</a>
         </div>
     </c:if>
-
     <!-- 如果用户列表非空 -->
-    <c:if test="${!empty blogList}">
+    <c:if test="${!empty blogs}">
         <table class="table table-bordered table-striped">
             <tr>
                 <th>ID</th>
@@ -46,12 +41,11 @@
                 <th>发布日期</th>
                 <th>操作</th>
             </tr>
-
-            <c:forEach items="${blogList}" var="blog">
+            <c:forEach items="${blogs}" var="blog">
                 <tr>
                     <td>${blog.id}</td>
                     <td>${blog.title}</td>
-                    <td>${blog.userByUserId.nickname}, ${blog.userByUserId.firstName} ${blog.userByUserId.lastName}</td>
+                    <td>${blog.userById.nickname}, ${blog.userById.password}</td>
                     <td><fmt:formatDate value="${blog.pubDate }" pattern="yyyy-MM-dd"/></td>
                     <td>
                         <a href="/blog/show/${blog.id}" type="button" class="btn btn-sm btn-success">详情</a>
@@ -63,10 +57,8 @@
         </table>
     </c:if>
 </div>
-
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>

@@ -19,7 +19,7 @@ public class UserController {
     UserRepository userRepository;
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
-    public String users(ModelMap map) {
+    public String users() {
         return "redirect:/user/users";
     }
 
@@ -59,7 +59,6 @@ public class UserController {
         modelMap.addAttribute("user", user);
         return "user/detail";
     }
-
 
     /**
      * 修改用户
