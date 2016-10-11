@@ -23,19 +23,18 @@
 <div class="container">
     <h1>修改博客</h1>
     <hr/>
-    <form:form action="/admin/blogs/updateP" method="post" commandName="blogP" role="form">
+    <form:form action="/blog/updateP" method="post" commandName="blogP" role="form">
         <div class="form-group">
             <label for="title">Title:</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title:"
                    value="${blog.title}"/>
         </div>
         <div class="form-group">
-            <label for="userByUserId.id">Author:</label>
-            <select class="form-control" id="userByUserId.id" name="userByUserId.id">
+            <label for="userById.id">Author:</label>
+            <select class="form-control" id="userById.id" name="userById.id">
                 <c:forEach items="${users}" var="user">
                     <c:if test="${user.id==blog.userById.id}">
-                        <option value="${user.id}"
-                                selected="selected">${user.nickname}, ${user.password}</option>
+                        <option value="${user.id}" selected="selected">${user.nickname}, ${user.password}</option>
                     </c:if>
                     <c:if test="${user.id!=blog.userById.id}">
                         <option value="${user.id}">${user.nickname}, ${user.password}</option>
@@ -50,8 +49,7 @@
         </div>
         <div class="form-group">
             <label for="pubDate">Publish Date:</label>
-            <input type="text" class="form-control" id="pubDate" name="pubDate"
-                   value="<fmt:formatDate value="${blog.pubDate }" pattern="yyyy-MM-dd"/>"/>
+            <input type="text" class="form-control" id="pubDate" name="pubDate" value="${blog.pubDate}"/>
         </div>
         <!-- 把 id 一并写入 blogP 中 -->
         <input type="hidden" id="id" name="id" value="${blog.id}"/>

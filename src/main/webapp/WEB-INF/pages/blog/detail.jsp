@@ -43,7 +43,7 @@
         </tr>
         <tr>
             <th>Publish Date</th>
-            <td><fmt:formatDate value="${detail.pubDate}" pattern="yyyy年MM月dd日"/></td>
+            <td>${detail.pubDate}</td>
         </tr>
     </table>
 </div>

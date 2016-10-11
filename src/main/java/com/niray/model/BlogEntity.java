@@ -87,4 +87,5 @@ public class BlogEntity {
     public void setUserById(UserEntity userById) {
         this.userById = userById;
     }
+
 }

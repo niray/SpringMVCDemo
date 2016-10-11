@@ -46,9 +46,9 @@
                     <td>${blog.id}</td>
                     <td>${blog.title}</td>
                     <td>${blog.userById.nickname}, ${blog.userById.password}</td>
-                    <td><fmt:formatDate value="${blog.pubDate }" pattern="yyyy-MM-dd"/></td>
+                    <td>${blog.pubDate}</td>
                     <td>
-                        <a href="/blog/show/${blog.id}" type="button" class="btn btn-sm btn-success">详情</a>
+                        <a href="/blog/detail/${blog.id}" type="button" class="btn btn-sm btn-success">详情</a>
                         <a href="/blog/update/${blog.id}" type="button" class="btn btn-sm btn-warning">修改</a>
                         <a href="/blog/delete/${blog.id}" type="button" class="btn btn-sm btn-danger">删除</a>
                     </td>

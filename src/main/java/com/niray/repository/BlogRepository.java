@@ -16,7 +16,7 @@ public interface BlogRepository extends JpaRepository<BlogEntity, Integer> {
 
     @Modifying
     @Transactional
-    @Query("update BlogEntity blog set blog.title = :newTitle,blog.content=:newContent,blog.pubDate =:newDate,blog.userById=:newUser where blog.id = :newId")
+    @Query("update BlogEntity blog set blog.title = :newTitle,blog.content=:newContent,blog.pubDate =:newDate,blog.userById.id=:newUser where blog.id = :newId")
     void updateBlog(@Param("newTitle") String title,
                     @Param("newContent") String content,
                     @Param("newUser") Integer userId,

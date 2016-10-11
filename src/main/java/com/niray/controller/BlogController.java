@@ -34,7 +34,7 @@ public class BlogController {
 
     @RequestMapping(value = "/blog", method = RequestMethod.GET)
     public String blogRoot() {
-        return "blog/blogs";
+        return "redirect:/blog/blogs";
     }
 
     @RequestMapping(value = "/blog/add", method = RequestMethod.GET)
@@ -49,7 +49,7 @@ public class BlogController {
         // 打印博客标题
         System.out.println(blogEntity.getTitle());
         // 打印博客作者
-//        System.out.println(blogEntity.getUserById().getNickname());
+        System.out.println(blogEntity.getUserById().getNickname());
         blogRepository.saveAndFlush(blogEntity);
         return "redirect:/blog/blogs";
     }
@@ -85,7 +85,7 @@ public class BlogController {
 
     @RequestMapping(value = "/blog/updateP", method = RequestMethod.POST)
     public String updateBlogPost(@ModelAttribute("blogP") BlogEntity blogEntity) {
-//        blogRepository.updateBlog(blogEntity.getTitle(), blogEntity.getContent(), blogEntity.getUserById().getId(), blogEntity.getPubDate(), blogEntity.getId());
+        blogRepository.updateBlog(blogEntity.getTitle(), blogEntity.getContent(), blogEntity.getUserById().getId(), blogEntity.getPubDate(), blogEntity.getId());
         blogRepository.flush();
         return "redirect:/blog/blogs";
     }
