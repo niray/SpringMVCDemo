@@ -18,15 +18,15 @@
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style type="text/css" >
-        #logindev{
+    <style type="text/css">
+        #logindev {
             position: absolute;
             top: 50%;
             -webkit-transform: translateY(-50%);
-            -moz-transform:  translateY(-50%);
-            -ms-transform:  translateY(-50%);
-            -o-transform:  translateY(-50%);
-            transform:  translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
             background-color: #ffffff;
         }
     </style>

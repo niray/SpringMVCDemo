@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b392de6-b74f-4f4a-a1b4-dcb6b8615944" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/077ca9f7-57c3-449f-a321-9df47d5381f1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/077ca9f7-57c3-449f-a321-9df47d5381f1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/niray/controller/BlogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/niray/controller/BlogController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/niray/model/BlogEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/niray/model/BlogEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/niray/repository/BlogRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/niray/repository/BlogRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/blog/blogs.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/blog/blogs.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/blog/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/blog/detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/blog/update.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/blog/update.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo1/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/demo1/WEB-INF/mvc-dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo1/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/demo1/WEB-INF/pages/index.jsp" />
     </list>
     <ignored path="mvcDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,8 +39,8 @@
       <file leaf-file-name="077ca9f7-57c3-449f-a321-9df47d5381f1.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/dataSources/077ca9f7-57c3-449f-a321-9df47d5381f1.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -1102,7 +1097,7 @@
       <workItem from="1476059591819" duration="22010000" />
       <workItem from="1476087779069" duration="2582000" />
       <workItem from="1476090875676" duration="4591000" />
-      <workItem from="1476145663146" duration="4887000" />
+      <workItem from="1476145663146" duration="4998000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1476068597180</created>
@@ -1132,11 +1127,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476095322393</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="init">
+      <created>1476151287956</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1476151287956</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40010000" />
+    <option name="totallyTimeSpent" value="40121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="993" extended-state="6" />
@@ -1701,8 +1703,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/dataSources/077ca9f7-57c3-449f-a321-9df47d5381f1.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding />
         </state>
       </provider>
