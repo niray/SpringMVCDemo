@@ -37,8 +37,12 @@
         <form class="form">
             <h2>Spring MVC</h2>
             <a href="/user" type="button" class="btn btn-primary btn-sm">用户管理</a>
-            <a href="/blog" type="button" class="btn btn-primary btn-sm">博客管理</a>
+            <a href="/user/json" type="button" class="btn btn-primary btn-sm">用户查询接口</a>
         </form>
+        <hr/>
+        <form>
+            <a href="/blog" type="button" class="btn btn-primary btn-sm">博客管理</a>
+            <a href="/blog/json" type="button" class="btn btn-primary btn-sm">博客查询接口</a></form>
     </div>
 </div> <!-- /container -->
 

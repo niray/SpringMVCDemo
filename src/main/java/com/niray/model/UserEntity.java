@@ -1,5 +1,7 @@
 package com.niray.model;
 
+import net.sf.json.JSONObject;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
@@ -14,6 +16,13 @@ public class UserEntity implements Serializable {
     private String nickname;
     private String password;
     private Collection<BlogEntity> blogById;
+
+
+    public void toJson() {
+        JSONObject jo = new JSONObject();
+        jo.put("id", id);
+    }
+
 
     @Id
     @Column(name = "id", nullable = false)
@@ -67,7 +76,7 @@ public class UserEntity implements Serializable {
         return result;
     }
 
-    @OneToMany(mappedBy = "userById")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "userById")
     public Collection<BlogEntity> getBlogById() {
         return blogById;
     }

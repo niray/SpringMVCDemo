@@ -2,13 +2,13 @@ package com.niray.controller;
 
 import com.niray.model.UserEntity;
 import com.niray.repository.UserRepository;
+import net.sf.json.JSONArray;
+import net.sf.json.JsonConfig;
+import net.sf.json.util.CycleDetectionStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,6 +17,28 @@ public class UserController {
 
     @Autowired
     UserRepository userRepository;
+
+    @RequestMapping(value = "/user/json", method = RequestMethod.GET, produces = "text/html;charset=UTF-8")
+    @ResponseBody
+    public String userOfBlog() {
+
+        JsonConfig jsonConfig = new JsonConfig();
+        jsonConfig.setCycleDetectionStrategy(CycleDetectionStrategy.LENIENT);
+//        jsonConfig.setJsonPropertyFilter(new PropertyFilter() {
+//            public boolean apply(Object source, String name, Object value) {
+//                //revert和user都是hibernate主外键关联的
+//                if (name.equals("userById") || name.equals("blogById")) {
+//                    return true;
+//                } else {
+//                    return false;
+//                }
+//            }
+//        });
+        List<UserEntity> users = userRepository.findAll();
+
+        JSONArray json = JSONArray.fromObject(users, jsonConfig);
+        return json.toString();
+    }
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public String users() {

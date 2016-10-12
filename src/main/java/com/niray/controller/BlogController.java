@@ -4,13 +4,13 @@ import com.niray.model.BlogEntity;
 import com.niray.model.UserEntity;
 import com.niray.repository.BlogRepository;
 import com.niray.repository.UserRepository;
+import net.sf.json.JSONArray;
+import net.sf.json.JsonConfig;
+import net.sf.json.util.CycleDetectionStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,6 +24,17 @@ public class BlogController {
     UserRepository userRepository;
     @Autowired
     BlogRepository blogRepository;
+
+
+    @RequestMapping(value = "/blog/json", method = RequestMethod.GET, produces = "text/html;charset=UTF-8")
+    @ResponseBody
+    public String jsonOfBlog() {
+        List<BlogEntity> blogs = blogRepository.findAll();
+        JsonConfig jsonConfig = new JsonConfig();
+        jsonConfig.setCycleDetectionStrategy(CycleDetectionStrategy.LENIENT);
+        JSONArray json = JSONArray.fromObject(blogs, jsonConfig);
+        return json.toString();
+    }
 
     @RequestMapping(value = "/blog/blogs", method = RequestMethod.GET)
     public String listOfBlog(ModelMap map) {
