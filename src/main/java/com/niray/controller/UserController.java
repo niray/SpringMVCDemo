@@ -68,6 +68,21 @@ public class UserController {
         return "redirect:/user/users";
     }
 
+    @RequestMapping(value = "/user/addnew", method = RequestMethod.POST)
+    @ResponseBody
+    public String newUserPOST(@RequestParam(value = "nickname", required = false) @RequestBody String nickname,
+                              @RequestParam(value = "password", required = false) @RequestBody String password) {
+        return nickname + " - " + password;
+    }
+
+    @RequestMapping(value = "/user/postnew", method = RequestMethod.POST)
+    @ResponseBody
+    public String newUserPostRB(@RequestBody String nickname,
+                                @RequestBody String password) {
+        return nickname + " - " + password;
+
+    }
+
     /**
      * 用户详情
      *
